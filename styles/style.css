@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 60px 50px;
+  padding: 93px 69px 92px 50px;
   gap: 10px;
 }
 
@@ -13,8 +13,8 @@
 
 .header__links-list {
   display: flex;
-  gap: 14px;
-  list-style: none;
+  gap: 34px;
+  list-style: circle;
 }
 
 .header__link {
@@ -24,24 +24,18 @@
   color: #000;
   font-size: 18px;
   letter-spacing: 0;
-  border-bottom: 1px solid black;
+  text-decoration: underline;
 }
 
 .header__link_active {
-  border-bottom: none;
-}
-
-.header__border {
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border: 1px solid black;
-  border-radius: 50%;
+  text-decoration: none;
+  list-style: none;
 }
 
 .header__logo {
   justify-self: center;
   display: block;
+  padding-left: 14%;
 }
 
 .header__logo__img {
@@ -60,8 +54,8 @@
 
 .address__link {
   color: #111;
-  font-weight: 500;
   white-space: nowrap;
+  text-decoration: underline;
 }
 
 /* main */
@@ -71,11 +65,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 727px;
+  min-height: 757px;
   padding: 165px 50px 50px;
   background-image: url("../images/cover.jpg");
-  block-size: cover;
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
 }
 
@@ -86,7 +81,7 @@
   z-index: 0;
 }
 
-.cover__title, 
+.cover__title,
 .cover__description {
   position: relative;
   z-index: 1;
@@ -95,10 +90,18 @@
 .cover__title {
   font-size: 100px;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .aligned-text {
   display: block;
+  letter-spacing: 30px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
 }
 
 .aligned-text_left {
@@ -107,21 +110,24 @@
 
 .aligned-text_center {
   text-align: center;
+  margin-left: 30px;
 }
 
 .aligned-text_right {
   text-align: right;
+  margin-right: -30px;
 }
 
 .cover__description {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   text-transform: uppercase;
 }
 
 .cover__description-text {
   max-width: 640px;
-  word-spacing: 10px;
+  word-spacing: 19px;
   font-size: 22px;
   line-height: 28px;
 }
@@ -132,26 +138,26 @@
   background-color: transparent;
   color: #fff;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 22px;
   cursor: pointer;
 }
 
 /* section-lots */
 .lots {
-  padding: 180px 20px;
+  padding: 180px 25px 0;
 }
 
 .lots__title {
   font-size: 40px;
   text-transform: uppercase;
   padding-left: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 25px;
 }
 
 .lots__card-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 24px;
   list-style: none;
 }
 
@@ -182,7 +188,7 @@
 .card .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 
@@ -207,7 +213,7 @@
 .card__title {
   font-size: 22px;
   text-transform: uppercase;
-  margin: 0 0 20px;
+  margin: 0 0 34px;
   text-decoration: underline;
 }
 
@@ -217,20 +223,20 @@
 
 .lots__look-more-link {
   display: inline-block;
-  margin-top: 25px;
+  margin-top: 32px;
   margin-left: 40px;
-  font-size: 18px;
-  text-transform: uppercase;
+  font-size: 20px;
+  text-transform: lowercase;
   text-decoration: underline;
 }
 
 /* section About */
 .about {
   display: grid;
-  grid-template-columns: 430px 1fr;
+  grid-template-columns: 334px 1fr;
+  padding: 150px 25px;
   column-gap: 25px;
-  align-items: start;
-  max-height: 595px;
+  row-gap: 10px;
 }
 
 .about__logo {
@@ -261,18 +267,21 @@
   gap: 25px;
   font-size: 20px;
   grid-column: 2;
+  line-height: 24px;
+  letter-spacing: 0;
 }
 
 /* footer */
 .footer {
   display: grid;
-  padding: 90px 0;
+  padding: 28px 50px;
   grid-template-columns: 1fr auto 1fr;
   align-items: start;
 }
 
 .footer__address {
   justify-self: start;
+  max-width: 260px;
 }
 
 .footer__menu {
@@ -285,9 +294,13 @@
 
 .footer__menu-link {
   text-decoration: underline;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-size: 18px;
   color: #000;
+}
+
+.footer__menu-link_active {
+  text-decoration: none;
 }
 
 .footer__menu-list-item {
@@ -297,7 +310,7 @@
 .footer__social-list {
   display: flex;
   justify-self: end;
-  gap: 20px;
+  gap: 48px;
   list-style: none;
 }
 
